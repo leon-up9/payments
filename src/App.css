@@ -1,0 +1,9 @@
+@import 'react-toastify/dist/ReactToastify.css';
+
+:root{
+  --main-color:#232843;
+}
+
+.App {
+  text-align: center;
+}
