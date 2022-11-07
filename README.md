@@ -1,4 +1,10 @@
-# Getting Started with Payments Project
+# What I Would do with More Time / Real App Scenario
+*Using Redux/Recoil For state managment
+*Dividing in smaller components
+*Theming and css variables
+*Loader style
+
+## Getting Started with Payments Project
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
