@@ -2,7 +2,7 @@
 *Using Redux/Recoil For state managment \
 *Dividing in smaller components\
 *Theming and css variables\
-*Loader style\
+*Loader style
 
 ## Getting Started with Payments Project
 
