@@ -36,14 +36,17 @@ const PaymentHistoryPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       api.getPayments().then((res) => {
-        const payments: IPaymentHistoryResponse[] = res.result;
+        const paymentsRes: IPaymentHistoryResponse[] = res.result ?? [];
 
         setPayments((prev) => {
           setIsLoading(false);
-          return mapPaymentHistory(payments);
+          return mapPaymentHistory(paymentsRes);
         });
       });
     };
+
+    modified:   src/components/Pages/PaymentHistoryPage/PaymentHistoryPage.tsx
+    modified:   src/services/client.ts
 
     fetchData().catch((err) => {
       toast.error(err.message);

@@ -1,6 +1,9 @@
 import axios from "axios";
 import { getToken } from "./token";
 
+const apiUrl =
+  process.env.NODE_ENV === "production" ? process.env.REACT_APP_API_URL : "";
+
 axios.interceptors.request.use(function (config) {
   const token = getToken();
   const newConfig = {
@@ -27,17 +30,17 @@ axios.interceptors.response.use(
 
 const api = {
   getToken: async () => {
-    const res = await axios.post("/auth-tokens");
+    const res = await axios.post(`${apiUrl}/auth-tokens`);
     return res.data.token;
   },
 
   createPayment: async (data: any) => {
-    const res = await axios.post("/payments", data);
+    const res = await axios.post(`${apiUrl}/payments`, data);
     return res.data;
   },
 
   getPayments: async (referenceId: string = "") => {
-    const res = await axios.get("/payments", {
+    const res = await axios.get(`${apiUrl}/payments`, {
       params: {
         referenceId,
       },
@@ -46,7 +49,7 @@ const api = {
   },
 
   getPayment: async (id: string) => {
-    const res = await axios.get(`/payments/${id}`);
+    const res = await axios.get(`${apiUrl}/payments/${id}`);
     return res.data;
   },
 };
