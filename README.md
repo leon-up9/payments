@@ -2,6 +2,7 @@
 *Using Redux/Recoil For state managment \
 *Dividing in smaller components\
 *Theming and css variables\
+*Use library if nessecery to generate uniqe ids\
 *Loader style
 
 ## Getting Started with Payments Project
