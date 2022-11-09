@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "https://unreliable-payments-wappznbt3q-uc.a.run.app/",
-  "homepage": ".",
+  "homepage": "./payments",
   "remote": "https://github.com/leon-up9/payments.git",
   "dependencies": {
     "@headlessui/react": "^1.7.4",
