@@ -45,9 +45,6 @@ const PaymentHistoryPage = () => {
       });
     };
 
-    modified:   src/components/Pages/PaymentHistoryPage/PaymentHistoryPage.tsx
-    modified:   src/services/client.ts
-
     fetchData().catch((err) => {
       toast.error(err.message);
       setIsLoading(false);
