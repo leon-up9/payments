@@ -2,7 +2,9 @@ import axios from "axios";
 import { getToken } from "./token";
 
 const apiUrl =
-  process.env.NODE_ENV === "production" ? process.env.REACT_APP_API_URL : "";
+  process.env.NODE_ENV === "production"
+    ? process.env.REACT_APP_API_URL
+    : "http://localhost:3333";
 
 axios.interceptors.request.use(function (config) {
   const token = getToken();
@@ -30,7 +32,7 @@ axios.interceptors.response.use(
 
 const api = {
   getToken: async () => {
-    const res = await axios.post(`${apiUrl}/auth-tokens`);
+    const res = await axios.get(`${apiUrl}/auth-tokens`);
     return res.data.token;
   },
 
